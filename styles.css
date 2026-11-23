@@ -1,0 +1,438 @@
+:root {
+    /* Tipografia */
+    --font-titulo: "VT323";
+    --font-texto: "Space Mono";
+    --fonte-tam-nome: clamp(2.5rem, 10vw, 7rem);
+    --fonte-peso: 400;
+    --fonte-tam-header: clamp(2.5rem, 5vw, 3.25rem);
+    --fonte-tam-temrinal: clamp(0.7rem, 2.5vw, 1.4rem);
+    --fonte-tam-lnComando: clamp(0.7rem, 2.5vw, 1.125rem);
+    --fonte-alinhamento-h1: 1;
+    --fonte-alinhamento-term: 1.6;
+    --fonte-alinhamento-para: 1.8;
+
+
+    /* Cores */
+    --cor-fundo: rgb(35, 16, 64);
+    --cor-secundaria: rgb(240, 2, 141);
+    --cor-destaque-1: rgb(37, 169, 130);
+    --cor-destaque-2: rgb(31, 224, 224);
+    --cor-sombra: rgb(255, 107, 222);
+    --cor-texto-escuro: rgba(0, 0, 0, 0.25);
+    --cor-texto-claro: #ffff;
+    --sombra-h1: 0 0 30px var(--cor-destaque-2), 4px 4px 0 var(--cor-sombra);
+    --sombra-h2: 0 0 10px var(--cor-destaque-1);
+    --sombra-texto: 0 0 10px var(--cor-secundaria);
+    --sombra-bloco-1: 0 0 36px var(--cor-secundaria);
+    --sombra-bloco-2: 0 0px 36px var(--cor-destaque-1);
+
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-image: url("img/fundo-quadriculado.png");
+    font-weight: var(--fonte-peso);
+}
+
+/* Botões de estilos*/
+#cores {
+    display: flex;
+    float: left;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+#cores > div {
+    margin: 5px 10px;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* CSS do Navegador*/
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0 auto;
+    height: 100px;
+    max-width: 900px;
+    overflow: hidden;
+
+}
+
+nav div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+nav p {
+    width: 100%;
+    padding-left: 0;
+
+}
+
+nav ul {
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    list-style: none;
+
+
+}
+
+nav li {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+
+}
+
+nav li a {
+    text-decoration: none;
+    font-family: var(--font-texto);
+    font-size: var(--fonte-tam-temrinal);
+    color: var(--cor-destaque-2)
+}
+
+nav li a:hover {
+    color: var(--cor-destaque-1)
+}
+
+nav p {
+    font-family: var(--font-texto);
+    font-size: var(--fonte-tam-temrinal);
+    color: var(--cor-secundaria);
+}
+
+nav li {
+    font-family: var(--font-texto);
+    font-size: var(--fonte-tam-temrinal);
+    color: var(--cor-destaque-2);
+}
+
+/* CSS da capa do portifolio */
+.terminal {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-claro);
+    font-family: var(--font-texto);
+    border: 1px solid var(--cor-secundaria);
+    box-shadow: var(--sombra-bloco-1);
+    max-width: 900px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.terminal header {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--cor-secundaria);
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.terminal div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+    line-height: var(--fonte-alinhamento-term);
+}
+
+.terminal div h1 {
+    font-family: var(--font-titulo);
+    font-size: var(--fonte-tam-nome);
+    line-height: var(--fonte-alinhamento-h1);
+    animation: pulsarBrilho 2s ease-in-out infinite;
+}
+
+.terminal div ul {
+    display: flex;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.terminal div li {
+    text-decoration: underline;
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+.terminal div li a {
+    font-family: var(--font-texto);
+    font-size: var(--fonte-tam-lnComando);
+    color: var(--cor-texto-claro)
+}
+
+.terminal div li a:hover {
+    color: var(--cor-secundaria);
+}
+
+.terminal h3 {
+    font-size: var(--fonte-tam-temrinal);
+    color: var(--cor-destaque-1);
+}
+
+.terminal b {
+    color: var(--cor-secundaria)
+}
+
+/* CSS do sobre mim */
+
+#sobreMim {
+    max-width: 900px;
+    margin: 20px auto;
+    overflow: hidden;
+
+}
+
+#sobreMim h3 {
+    font-family: var(--font-texto);
+    font-size: var(--fonte-tam-temrinal);
+    color: var(--cor-secundaria);
+
+}
+
+#sobreMim h2 {
+    font-family: var(--font-titulo);
+    font-size: var(--fonte-tam-header);
+    line-height: var(--fonte-alinhamento-h1);
+    text-shadow: var(--sombra-h2);
+    color: var(--cor-texto-claro);
+}
+
+#sobreMim p {
+    font-family: var(--font-texto);
+    font-size: var(--fonte-tam-lnComando);
+    text-align: justify;
+    line-height: var(--fonte-alinhamento-para);
+    color: var(--cor-texto-claro)
+}
+
+/* CSS das Stacks*/
+#stacks {
+    max-width: 900px;
+    margin: 20px auto;
+
+}
+
+#stacks h3 {
+    font-family: var(--font-texto);
+    font-size: var(--fonte-tam-temrinal);
+    color: var(--cor-secundaria)
+}
+
+#stacks div {
+    border: solid 1px var(--cor-destaque-2);
+    box-shadow: var(--sombra-bloco-2);
+    padding: 24px;
+    margin: 0 auto;
+}
+
+#stacks ul {
+    list-style: none;
+}
+
+#stacks li {
+    font-family: var(--font-texto);
+    font-size: var(--fonte-tam-temrinal);
+    color: var(--cor-texto-claro);
+}
+
+li b {
+    color: var(--cor-destaque-2);
+}
+
+/* CSS dos projetos*/
+
+#projetos {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+
+#projetos li {
+    font-family: var(--font-texto);
+    font-size: var(--fonte-tam-lnComando);
+    color: var(--cor-sombra)
+}
+
+#projetos>h3 {
+    font-family: var(--font-texto);
+    font-size: var(--fonte-tam-temrinal);
+    color: var(--cor-secundaria)
+}
+
+#projetos>h2 {
+    font-family: var(--font-titulo);
+    font-size: var(--fonte-tam-header);
+    color: var(--cor-texto-claro);
+    text-shadow: var(--sombra-h2);
+}
+
+#projetos p {
+    font-family: var(--font-texto);
+    font-size: var(--fonte-tam-lnComando);
+    line-height: var(--fonte-alinhamento-term);
+}
+
+#projetos a {
+    font-family: var(--font-texto);
+    font-size: var(--fonte-tam-lnComando);
+    text-decoration: none;
+    color: var(--cor-destaque-1)
+}
+
+#projetos a:hover {
+    color: var(--cor-secundaria)
+}
+
+#projetos>.terminal {
+    border: solid 1px var(--cor-destaque-2);
+    box-shadow: 0 0 12px var(--cor-sombra);
+
+}
+
+/* CSS seção contatos*/
+#contato {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 24px;
+    border: solid 1px var(--cor-destaque-2);
+    background-color: var(--cor-fundo);
+    box-shadow: var(--sombra-bloco-1);
+}
+
+#contato header {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-texto);
+    font-size: var(--fonte-tam-temrinal);
+    color: var(--cor-secundaria);
+
+}
+
+#contato div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#contato h2 {
+    font-family: var(--font-titulo);
+    font-size: var(--fonte-tam-header);
+    color: var(--cor-texto-claro);
+    text-shadow: var(--sombra-texto);
+    line-height: var(--fonte-alinhamento-h1);
+
+}
+
+#contato table {
+    text-align: left;
+    padding: auto;
+
+}
+
+#contato td {
+    font-family: var(--font-texto);
+    font-size: var(--fonte-tam-lnComando);
+    color: var(--cor-destaque-1)
+}
+
+#contato th {
+    font-family: var(--font-texto);
+    font-size: var(--fonte-tam-lnComando);
+    color: rgb(50, 127, 127);
+
+}
+
+#contato a {
+    text-decoration: none;
+    color: var(--cor-destaque-2);
+
+}
+
+#contato a:hover {
+    color: var(--cor-destaque-1);
+
+}
+
+#direitos {
+    text-align: center;
+    font-family: var(--font-texto);
+    font-size: var(--fonte-tam-lnComando);
+    color: var(--cor-sombra);
+    padding-top: 20px;
+}
+
+/* Animação do cursor*/
+.cursor {
+    display: inline-block;
+    width: 1ch;
+    height: 1.3rem;
+    background-color: var(--cor-destaque-1);
+    margin-left: 5px;
+    animation: piscar 1s steps(1) infinite;
+}
+
+/* Definição de animações */
+/* Cursor de prompt */
+@keyframes piscar {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Animação de brilho */
+@keyframes pulsarBrilho {
+    0%,
+    100% {
+        text-shadow:  0 0 20px var(--cor-destaque-2), 4px 4px 0 var(--cor-sombra);
+
+    }
+
+    50%{
+        text-shadow:  0 0 30px var(--cor-destaque-2), 4px 4px 0 var(--cor-sombra);
+    }
+}
+
+/* Configuração de Responsividade */
+@media (max-width: 580px) {
+    nav div p {
+        display: none;
+    }
+    nav li {
+        margin: auto;
+        padding: 0 0.6rem;
+    }
+    .terminal div ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

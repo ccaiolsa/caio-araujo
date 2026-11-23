@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap"
+        rel="stylesheet">
+    <title>Meu portifólio</title>
+</head>
+
+<body>
+    <script type="module">
+        import {mudarEstilo1, mudarEstilo2, mudarEstilo3} from './script.js'
+
+        mudarEstilo1();
+        mudarEstilo2();
+        mudarEstilo3();
+    </script>
+    <!-- Barra de Navegação-->
+     <!-- Botão de cores -->
+      <div id="cores">
+        <div id="circulo1" style="background-color: rgb(192, 97, 250); cursor: pointer"; onclick="mudarEstilo1()" ></div>
+        <div id="circulo2" style="background-color: rgb(55, 17, 191); cursor: pointer" onclick="mudarEstilo2()"></div>
+        <div id="circulo3" style="background-color: rgb(242, 240, 235); cursor: pointer" onclick="mudarEstilo3()"></div>
+
+      </div>
+    <header>
+        <nav>
+            <div>
+                <p>~/ portifolio</p>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#sobreMim">./sobre</a></li>
+                    <li><a href="#projetos">./projetos</a></li>
+                    <li><a href="contato">./contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Capa do portifólio-->
+    <section class="bloco" id="apresentacao">
+        <div class="terminal">
+            <header>
+                <h3>~pwd ./portifolio</h3>
+            </header>
+
+            <div>
+                <h3><b>$</b> QuemSouEu</h3>
+                <h1>[CAIO ARAÚJO]</h1>
+
+                <h3><b>$</b> cargo.txt</h3>
+                <p>Analista de Testes // Quality Assurance</p>
+
+                <h3><b>$</b> ls projetos</h3>
+                <ul>
+                    <li><a href="#p1">projeto_1</a></li>
+                    <li><a href="#p2">projeto_2</a></li>
+                    <li><a href="#p3">projeto_3</a></li>
+                    <li><a href="#p4">projeto_4</a></li>
+                </ul>
+
+                <h3><b>$</b> <span class="cursor"></span></h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre mim-->
+    <section id="sobreMim">
+        <div>
+            <br>
+            <h3>$ cat sobre.md</h3>
+            <br>
+            <h2>## Sobre Mim</h2>
+            <br>
+            <p>Atuo com automação e validação de qualidade para aplicações web, mobile e APIs REST, desenvolvendo
+                suítes de testes E2E e testes de integração com foco em regras de negócio, confiabilidade e melhoria
+                contínua. </p>
+            <br>
+            <p>
+                Ao longo da minha vida profissional tenho focado meus esforços em aprimorar minhas competências técnicas
+                e sociais pois acredito pois gosto de desafios assim como gosto de aprender. A área de Qualidade assim
+                como a de Dados tem me instigado a aprender cada vez mais sobre esse mundo interconectado e nossas
+                relações com as novas tecnologias.
+            </p>
+        </div>
+    </section>
+
+    <!-- Minhas Stacks-->
+    <section id="stacks">
+        <br>
+        <h3>$ cat stack.txt</h3>
+        <br>
+        <div>
+            <ul>
+                <li><b>✓ JavaScript</b></li>
+                <li><b>✓ Python</b></li>
+                <li><b>✓ Testes Web</b> - Cypress</li>
+                <li><b>✓ Testes Mobile</b> - Appium, WebdriverIO</li>
+                <li><b>✓ Testes API</b> - Jest, Postman</li>
+                <li><b>✓ Testes Performance</b> - Grafana k6, JMeter</li>
+                <li><b>✓ CI/CD Github Actions</b></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <h3>$ cat projetos.md</h3>
+        <h2>## Projetos</h2>
+        <div class="terminal">
+            <header>
+                <h3 id="p1">projeto_1/</h3>
+            </header>
+            <div>
+                <h2>[TCC-EBAC-QA]</h2>
+                <p>Reprodução das boas práticas DevOps e de diferentes níveis de testes em aplicações de
+                    ambiente mobile e web.</p>
+                <ul>
+                    <li>#javascript</li>
+                    <li>#cypress</li>
+                    <li>#cucumber</li>
+                    <li>#wdio</li>
+                    <li>#appium</li>
+                    <li>#jest</li>
+                    <li>#k6</li>
+                    <li>#docker</li>
+                </ul>
+                <a href="https://github.com/ccaiolsa/TCC-EBAC-QA" target="_blank" rel="noopener noreferrer">→
+                    Acessar Github</a>
+            </div>
+        </div>
+
+        <div class="terminal">
+            <header>
+                <h3 id="p2">projeto_2/</h3>
+            </header>
+            <div>
+                <h2>[E2E-test-wdio]</h2>
+                <p>Implementação de testes E2E e conteinerização de aplicações locais para testes em ambientes
+                    diferentes dos de produção</p>
+                <ul>
+                    <li>#javascript</li>
+                    <li>#wdio</li>
+                    <li>#allure-reporter</li>
+                    <li>#docker</li>
+                </ul>
+                <a href="https://github.com/ccaiolsa/E2E-test-wdio" target="_blank" rel="noopener noreferrer">→
+                    Acessar Github</a>
+            </div>
+        </div>
+
+        <div class="terminal">
+            <header>
+                <h3 id="p3">projeto_3/</h3>
+            </header>
+            <div>
+                <h2>[k6-api-test]</h2>
+                <p>Testes de performance utilizando k6 com openAPI Generator para a extração de requisições com
+                    foco em agilizar essa etapa de testes</p>
+                <ul>
+                    <li>#k6</li>
+                    <li>#openAPI</li>
+                    <li>#docker</li>
+                </ul>
+                <a href="https://github.com/ccaiolsa/k6-api-test" target="_blank" rel="noopener noreferrer">→
+                    Acessar Github</a>
+            </div>
+        </div>
+
+        <div class="terminal">
+            <header>
+                <h3 id="p4">projeto_4/</h3>
+            </header>
+            <div>
+                <h2>[teste-mobile-android]</h2>
+                <p>Testes assíncronos em ambiente Android utilizando WebdriverIO e Appium com a configuração do
+                    workflow para implementação de CI/CD</p>
+                <ul>
+                    <li>#wdio</li>
+                    <li>#allure-reporter</li>
+                    <li>#appium</li>
+                    <li>#githubActions</li>
+                </ul>
+                <!-- Correção: 'rel' no lugar de 'role' -->
+                <a href="https://github.com/ccaiolsa/Teste-mobile-Android" target="_blank" rel="noopener noreferrer">→
+                    Acessar Github</a>
+            </div>
+        </div>
+    </section>
+    <br>
+    <footer id="contato">
+        <div>
+            <header>
+                <h3>$ ./contato.sh</h3>
+            </header>
+            <br>
+        </div>
+        <div>
+            <h2>Vamos conversar?</h2>
+            <table>
+                <tr>
+                    <th>
+                        Email
+                    </th>
+                    <td>:</td>
+                    <td><a href="ccaiolsa@gmail.com">ccaiolsa@gmail.com</a></td>
+                </tr>
+                <tr>
+                    <th>
+                        Github
+                    </th>
+                    <td>:</td>
+                    <td><a href="https://github.com/ccaiolsa" target="_blank">https://github.com/ccaiolsa</a></td>
+                </tr>
+                <tr>
+                    <th>
+                        LinkedIn
+                    </th>
+                    <td>:</td>
+                    <td><a href="https://www.linkedin.com/in/ccaiolsa-qa/"
+                            target="_blank">linkedin.com/in/ccaiolsa-qa</a></td>
+                </tr>
+            </table>
+        </div>
+        </div>
+
+    </footer>
+    <p id="direitos">2026 CAIO ARAUJO · exit 0</p>
+</body>
+
+</html>
